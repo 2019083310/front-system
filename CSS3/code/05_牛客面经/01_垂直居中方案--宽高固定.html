@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .container {
+      width: 600px;
+      height: 600px;
+      background-color: yellow;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .content {
+      width: 200px;
+      height: 200px;
+      background-color: aqua;
+      /* 水平居中--宽度高度固定 */
+      /* 1.margin */
+      /* margin: 0 auto; */
+      /* 2. transform  */
+      /* transform: translateX(200px); */
+      /* 3.position相对定位 */
+      /* position: relative; */
+      /* left: 200px; */
+      /* 4.position绝对定位 */
+      /* position: absolute; */
+      /* left: 200px; */
+
+      /* 垂直居中--宽度高度固定 */
+      /* 1.transform */
+      /* transform: translateY(200px); */
+      /* 2.position相对定位 */
+      /* position: relative; */
+      /* top: 200px; */
+      /* 3.position绝对定位 */
+      /* position: absolute; */
+      /* top: 200px; */
+      /* 4.margin */
+      /* margin-top: 200px; */
+
+      /* 水平垂直居中--宽度高度固定 */
+      /* 1.相对定位 */
+      /* position: relative;
+      left: 200px;
+      top: 200px; */
+      /* 2.绝对定位 */
+      /* position: absolute;
+      left: 200px;
+      top: 200px; */
+      /* 3.transform */
+      /* transform: translateX(200px) translateY(200px); */
+      /* 4.margin */
+      /* margin: 200px; */
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 宽度固定的几种方案 -->
+  <div class="container">
+    <div class="content"></div>
+  </div>
+</body>
+
+</html>

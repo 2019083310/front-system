@@ -1,0 +1,11 @@
+#box{
+  width: 200px;
+  height: 200px;
+  background-color: orange;
+}
+
+span{
+  font-size:30px;
+  color:purple;
+  display: flex;
+}

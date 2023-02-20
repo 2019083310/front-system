@@ -1,0 +1,7 @@
+div {
+  border: 100px solid transparent;
+  width: 0;
+  height:0;
+  border-radius:50%;
+  border-top-color:red;
+}

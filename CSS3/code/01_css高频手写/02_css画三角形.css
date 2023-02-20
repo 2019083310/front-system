@@ -1,0 +1,26 @@
+ /* 实现三角形的第一种方式:border样式 */
+ #demo{
+  width: 0;
+  height: 0;
+  border:10px solid;
+  border-top-color: transparent;
+  border-bottom-color: orange;
+  border-left-color:transparent;
+  border-right-color:transparent;
+}
+#demo2{
+  width: 0;
+  height: 0;
+  border:10px solid;
+  border-top-color: transparent;
+  border-bottom-color: orange;
+  border-left-color:orange;
+  border-right-color:transparent;
+}
+/* 第二种方式:clip-path */
+#demo3{
+  width: 160px;
+  height: 200px;
+  background-color: #bfa;
+  clip-path:polygon(0 0,0 100%,100% 50%) ;
+}

@@ -1,0 +1,41 @@
+body{
+  text-align: center;
+}
+.header{
+  line-height: 50px;
+  background-color:bisque;
+}
+
+.wrapper{
+  width:100%;
+  float:left;
+  background-color: brown;
+  line-height:200px;
+}
+
+.center{
+  margin:0 100px;
+  background-color: antiquewhite;
+}
+
+.left{
+  width:100px;
+  line-height:200px;
+  float:left;
+  margin-left:-100%;
+  background-color: aqua;
+}
+
+.right{
+  float:left;
+  line-height:200px;
+  width:100px;
+  margin-left:-100px;
+  background-color: blueviolet;
+}
+
+.footer{
+  clear:both;
+  line-height: 50px;;
+  background-color: cornflowerblue;
+}

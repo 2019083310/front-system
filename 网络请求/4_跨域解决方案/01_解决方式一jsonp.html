@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script src="./jsonp.js"></script>
+  <script>
+    jsonp({
+      url:'https://wis.qq.com/weather/common',
+      data:{
+        source:'pc',
+        weather_type:'forecast_1h',
+        province:'辽宁省',
+        city:'大连市'
+      },
+      success(data){
+        console.log(data)
+      }
+    })
+  </script>
+</body>
+</html>

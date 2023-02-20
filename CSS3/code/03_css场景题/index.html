@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- <link rel="stylesheet" href="./01_画扇形.css"> -->
+  <!-- <link rel="stylesheet" href="./02_0.5px的线.css"> -->
+  <!-- <link rel="stylesheet" href="./04_css画等边三角形.css"> -->
+  <!-- <link rel="stylesheet" href="../01_css高频手写/02_css画三角形.css"> -->
+  <link rel="stylesheet" href="./05_实现毛玻璃.css">
+  <!-- <style>
+    p{
+      font-size: 10px;
+      -webkit-transform: scale(0.8);
+    }
+  </style> -->
+</head>
+
+<body>
+  <div></div>
+  <!-- chrome浏览器最左支持12px的字体，小于就不支持了 -->
+  <!-- <p style="color:orange;">111</p> -->
+
+  <!-- <div id="box1"></div>
+  <div id="demo"></div> -->
+
+  <!-- // 相对于body进行绝对定位 -->
+  <!-- 毛玻璃 -->
+  <!-- 1.只使用透明度不能准确的实现毛玻璃的效果。
+       2.如果单独的使用filter：blur（…px），发现子元素全部模糊。
+      解决方法：主要通过，蒙层（定位来实现） -->
+  <div class="frosted"></div>
+  <div class="headSty">
+    <div class="logoimg"></div>
+    <div class="left">
+      <div class="otherNav">
+        <div class="d3">
+          登陆/注册
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

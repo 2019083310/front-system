@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- 场景1:父子元素外边距重叠 -->
+  <!-- <style>
+    body {
+      background: gray;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      width: 600px;
+      height: 600px;
+      background: yellow;
+      margin-top: 100px;
+    }
+
+    .content {
+      width: 200px;
+      height: 200px;
+      background: green;
+      margin-top: 100px;
+    }
+  </style> -->
+  <!-- 场景2
+  <style>
+    body {
+      background: gray;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      width: 600px;
+      height: 600px;
+      background: yellow;
+      /* 给父元素变成BFC */
+      overflow: hidden;
+    }
+
+    .content {
+      width: 200px;
+      height: 200px;
+      background: green;
+      margin-top: 100px;
+    }
+  </style> -->
+  <!-- 场景三：兄弟元素外边距重叠 -->
+  <!-- <style>
+    body {
+      background: gray;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      width: 600px;
+      height: 600px;
+      background: yellow;
+      /* overflow: hidden; */
+    }
+
+    .father {
+      overflow: hidden;
+    }
+
+    .box1 {
+      width: 200px;
+      height: 200px;
+      background: green;
+      margin-bottom: 100px;
+    }
+
+    .box2 {
+      width: 200px;
+      height: 200px;
+      background: blue;
+      margin-top: 100px;
+    }
+  </style> -->
+  <!-- 场景4：空元素间外边距重叠 -->
+  <style>
+    body {
+      background: gray;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      width: 600px;
+      height: 600px;
+      background: yellow;
+    }
+
+    .box1 {
+      width: 200px;
+      height: 200px;
+      background: green;
+    }
+
+    .box2 {
+      width: 200px;
+      height: 200px;
+      background: blue;
+    }
+
+    .null {
+      margin-top: 25px;
+    }
+
+    .father {
+      overflow: hidden;
+    }
+  </style>
+</head>
+
+<body>
+  <!--1- 兄弟案例 -->
+  <!-- <div class="container">
+    <div class="father">
+      <div class="box1"></div>
+    </div>
+    <div class="box2"></div>
+  </div> -->
+  <!-- 原因：块级元素的上外边距或下外边距相邻时会合并在一起 -->
+  <!-- 规则：同下! -->
+  <!-- 通过给其中一个兄弟元素添加父容器并添加 overflow: hidden 属性，使之成为 BFC  -->
+
+  <!-- 2-父子案例 -->
+  <!-- <div class="container">
+    <div class="content"></div>
+  </div> -->
+  <!-- 发生外边距重叠的原因是：一个盒子如果没有设置BFC，那么它的外边距和第一个子元素的外边距重叠 -->
+  <!-- 规则是：正正取最大，负负取最大，正负相加 -->
+  <!-- 解决办法：设置BFC，方法：OFDP -->
+  <!-- 解决原理：BFC是一个独立的布局区域，父子/外部/内部互不影响 -->
+
+  <!-- 3-空元素间外边距重叠 -->
+  <div class="container">
+    <div class="box1"></div>
+    <!-- <div class="father"> -->
+    <p class="null"></p>
+    <!-- </div> -->
+    <!-- <div class="father"> -->
+    <p class="null"></p>
+    <!-- </div> -->
+    <!-- <div class="father"> -->
+    <p class="null"></p>
+    <!-- </div> -->
+    <!-- <div class="father"> -->
+    <p class="null"></p>
+    <!-- </div> -->
+    <div class="box2"></div>
+  </div>
+  <!-- 场景：如果一个块级元素没有任何内容并且设置了 margin-top 和 margin-bottom 时会发生 margin 合并。 -->
+  <!-- 解决办法和兄弟元素外边距重叠一样 -->
+</body>
+
+</html>

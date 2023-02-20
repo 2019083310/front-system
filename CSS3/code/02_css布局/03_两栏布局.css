@@ -1,0 +1,58 @@
+/* 
+  两栏布局：左侧固定 右侧自适应
+*/
+
+/* 方式一：float ，左右元素宽度规定，向左浮动 */
+/* overflow:hidden会开启BFC,不会与浮动元素发生重叠 */
+/* overflow:hidden; */
+.outer {
+  height: 500px;
+}
+
+.left {
+  float: left;
+  width: 200px;
+  height: 100%;
+  background-color: lightcoral;
+}
+
+.right {
+  height: 100%;
+  margin-left: 200px;
+  background-color: lightseagreen;
+}
+
+/* 方式2:flex布局 */
+/* .outer{
+  height:100%;
+  display: flex;
+  flex-wrap:wrap;
+}
+
+.left{
+  flex:0 1 300px;
+  background-color: aquamarine;
+}
+
+.right{
+  flex:1;
+  background-color: antiquewhite;
+} */
+
+/* 方式三：绝对定位 */
+/* .outer{
+  position:relative;
+  height: 100px;
+}
+
+.left{
+  position: absolute;
+  width:200px;
+  height:100%;
+  background-color: azure;
+}
+.right{
+  margin-left:200px;
+  height:100%;
+  background-color: blueviolet;
+} */

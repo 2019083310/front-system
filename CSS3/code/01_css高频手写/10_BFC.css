@@ -1,0 +1,12 @@
+/* 
+  BFC--块级格式上下文  是一种规则 
+  他可以包含浮动的元素，不会高度塌陷，不会影响页面的布局，是一个独立的布局区域
+
+  比如：利用广告的定位，点击关闭广告，并不会影响页面的布局，这就是BFC的作用
+
+  开启BFC的方式：
+    1-float不为none  
+    2-overflow不是visible的所有值包括hidden auto scroll
+    3-display:inline-block  flex只能是这两个
+    4-Position定位只能是absolute或者fixed
+*/

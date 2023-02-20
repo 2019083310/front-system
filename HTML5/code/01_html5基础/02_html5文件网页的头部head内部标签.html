@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- head内的标签关系的性能优化，搜索优化，交互实现 -->
+  <!--1.1meta 表示网页的编码 -->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!--1.2 表示十秒之后，跳转到后面的url -->
+  <!-- <meta http-equiv="Refresh" content="10;url=https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/meta"> -->
+  <!-- 表示10s之后自动刷新页面 -->
+  <!-- <meta http-equiv="Refresh" content="10"> -->
+  <!-- 1.3meta标签还可以表示网页爬虫相关的优化 -->
+  <meta name="keyword" content="购物,京东，小米">
+  <!-- 1.4表示网页的完美视口，页面的缩放比例，禁止用户缩放等等 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- 1.5网页的描述信息 -->
+  <meta name="description" content="this is zhangsan">
+  <!-- 1.6content-type,表示是html文件 -->
+  <meta name="content-type" content="text/html">
+
+  <!-- 2.script脚本文件---涉及到页面的性能优化 -->
+  <!-- defer/async/type -->
+  <!-- script脚本文件放在顶部会影响DOM的解析，从而影响页面的加载性能 -->
+  <!-- defer属性可以等到html解析完成之后在执行js脚本 -->
+  <!-- async属性会在js脚本文件加载完成之后立即执行，对于页面的html解析可能会有阻塞 -->
+  <!-- type属性可以设置为module,浏览器按照es6标准解析，效果等同于defer -->
+  <!-- 还可以通过监听DOMContentLoaded事件来动态添加js脚本文件 -->
+
+  <!-- 3.title标签，网页的标题，还可以设置一些动态效果,一个网页只能有一个title标签 -->
+  <title>Document</title>
+
+  <!-- 4.link标签也会影响页面的加载性能 -->
+  <!-- 我们可以加上某一些属性，来进行性能提升 -->
+  <!--4.1 pre-fetch 可以进行资源预加载   -->
+  <!-- <link rel="pre-fetch" href="/"> -->
+  <!-- 4.2pre-load  可以进行资源预下载,和pre-fetch的区别是pre-fetch有可能会在浏览器繁忙的时候不进行，但是pre-load都会进行 -->
+  <!-- 4.3 pre-connection  在真正进行http连接之前，进行一些耗时的操作，比如:tcp,tls,dns等等 -->
+</head>
+
+<body>
+
+</body>
+
+</html>

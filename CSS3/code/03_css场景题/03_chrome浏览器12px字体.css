@@ -1,0 +1,4 @@
+/* 
+  chrome浏览器支持的最小的字体大小的12px，如果在小也会是12px
+  解决：-webkit-transform:scale()--利用缩小，缩小字体的大小
+*/

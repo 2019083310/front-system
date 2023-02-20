@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <!-- Node是节点:包括文本节点、注释节点、元素节点、文档节点 -->
+  <!-- Element是Node的子节点，Node包含Element:Element是元素的集合ElementCollections -->
+  <!-- Node.childNodes返回的DOM数的子节点集合 -->
+  <!-- Element.children返回的是元素集合 -->
+  <div id="box1">
+    <p>hello</p>
+    <span>hi</span>
+    <b>he</b>
+    <em>hei</em>
+    <!-- 我是注释 -->
+  </div>
+  <script>
+    console.log(document.querySelector('#box1').children)
+    console.log(document.querySelector('#box1').childNodes)
+  </script>
+</body>
+</html>

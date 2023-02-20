@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script src="https://cdn.bootcdn.net/ajax/libs/axios/0.21.1/axios.js"></script>
+  <script>
+    // 我们可以为一个请求添加多个拦截器，都会执行
+    // 对于请求拦截器是从后往前执行
+    // 对于响应拦截器是从上到下依次执行
+
+    // 添加两个请求拦截器(回调函数)
+    axios.interceptors.request.use(
+      config => {
+        console.log('request interceptor1 onResolved()') // -----------2
+        return config
+      },
+      error => {
+        console.log('request interceptor1 onRejected()')
+        return Promise.reject(error)
+      }
+    )
+
+    axios.interceptors.request.use(
+      config => {
+        console.log('request interceptor2 onResolved()') // -----------1
+        return config
+      },
+      error => {
+        console.log('request interceptor2 onRejected()')
+        return Promise.reject(error)
+      }
+    )
+
+    // 添加两个响应拦截器
+    axios.interceptors.response.use(
+      resopnse => {
+        console.log('response interceptor1 onResolved()') // -----------3
+        return resopnse
+      },
+      error => {
+        console.log('response interceptor1 onRejected()')
+        return Promise.reject(error)
+      }
+    )
+
+    axios.interceptors.response.use(
+      resopnse => {
+        console.log('response interceptor2 onResolved()') // -----------4
+        return resopnse
+      },
+      error => {
+        console.log('response interceptor2 onRejected()')
+        return Promise.reject(error)
+      }
+    )
+
+    axios.get('http://localhost:3000/posts')
+      .then(response => {
+        console.log('data', response.data) //data Array(4) -------------5
+      })
+      .catch(error => {
+        cosole.log('error', error.message)
+      })
+
+    // request interceptor2 onResolved()
+    // request interceptor1 onResolved()
+    // response interceptor1 onResolved()
+    // response interceptor2 onResolved()
+    // data Array(4)
+  </script>
+</body>
+
+</html>

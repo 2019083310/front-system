@@ -1,0 +1,26 @@
+
+/* 步骤总结: 
+      1.设置宽度
+      2.设置文本一行显示不换行
+      3.设置文本溢出：省略号
+      4.设置区域溢出：隐藏
+*/
+
+/* 单行文本 */
+/* #demo3{
+  width: 50px;
+  height:20px;
+  border:1px solid #333;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+} */
+
+/* 多行文本 */
+/* p{
+  height:210px;
+  overflow: hidden;
+  display:-webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+} */

@@ -1,0 +1,19 @@
+/* 
+  box-shadow:隐形，可以创建边框
+  box-shadow:水平偏移 垂直偏移 阴影半径 扩散半径 颜色
+  如果向内扩散 insert第一个值
+*/
+
+/* #demo2{
+  margin:0 auto;
+  box-shadow: 0 0 0px 20px orange;
+} */
+
+#demo6{
+  width:380px;
+  box-shadow: 0 0 0px 10px green,
+              0 0 0px 20px white,
+              -10px -10px 0 20px #bfa,
+              10px 10px 0 20px #bfa
+    ;
+}

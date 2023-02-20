@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- 1.flex -->
+  <!-- <style>
+    .container {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .left {
+      flex-basis: 300px;
+      background-color: blueviolet;
+      height: 100%;
+    }
+
+    .right {
+      flex: 1;
+      background-color: aqua;
+      height: 100%;
+    }
+  </style> -->
+  <!-- 2.绝对定位 -->
+  <!-- <style>
+    .container {
+      height: 100vh;
+      position: relative;
+    }
+
+    .left {
+      width: 300px;
+      height: 100%;
+      background-color: aqua;
+    }
+
+    .right {
+      height: 100%;
+      position: absolute;
+      left: 300px;
+      width: 100%;
+      top: 0;
+      background-color: blueviolet;
+    }
+  </style> -->
+  <!-- 3.浮动法 -->
+  <!-- <style>
+    .container {
+      height: 100vh;
+    }
+
+    .left {
+      width: 300px;
+      height: 100%;
+      background-color: aqua;
+      float: left;
+      text-align: center;
+    }
+
+    .right {
+      height: 100%;
+      background-color: blueviolet;
+      margin-left: 300px;
+      text-align: center;
+    }
+  </style> -->
+  <!-- 4.grid布局 -->
+</head>
+
+<body>
+  <!-- 实现左侧宽度固定，右侧自适应 -->
+  <!-- 1.flex布局 -->
+  <div class="container">
+    <div class="left">this is left</div>
+    <div class="right">this is right</div>
+  </div>
+</body>
+
+</html>

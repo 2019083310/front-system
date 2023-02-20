@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script src='./js/axios2.js'></script>
+  <script>
+    function testGet() {
+      lyAxios({
+        url: 'http://localhost:3000/posts',
+        method: 'GET',
+      }).then(res => {
+        console.log(res)
+      })
+    }
+
+    function testPost() {
+      lyAxios({
+        url: 'http://localhost:3000/posts',
+        method: 'POST',
+      }).then(res => {
+        console.log(res)
+      })
+    }
+
+    setTimeout(() => {
+      testGet()
+      testPost()
+    }, 1000)
+  </script>
+</body>
+
+</html>

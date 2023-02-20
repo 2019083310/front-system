@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .container {
+      width: 400px;
+      box-sizing: border-box;
+      height: 400px;
+      background: blue;
+    }
+
+    .container div {
+      float: left;
+    }
+
+    .green {
+      width: 200px;
+      height: 200px;
+      background: green;
+      /* margin-top: -20px; */
+      /* margin-bottom: -20px; */
+      /* margin-left: -20px; */
+      margin-right: -20px;
+    }
+
+    .yellow {
+      width: 200px;
+      height: 200px;
+      background: yellow;
+      margin-bottom: -20px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 1-盒模型分为ie盒模型和标准盒模型 通过box-sizing属性来切换，区别太熟悉了-->
+  <!-- 2-margin负值问题 -->
+  <!-- 四种情况： -->
+  <!-- margin-top为负值自身会向上移动，同时会影响下方的元素会向上移动 -->
+  <!-- margin-left为负值自身会向左移动，同时右方元素向左移动 -->
+  <!-- margin-right和margin-bottom元素自身不会移动，但是会减少自身高度或宽度，从而使其他元素向上或向下移动 -->
+
+</body>
+<div class="container">
+  <div class="green"></div>
+  <div class="yellow"></div>
+</div>
+
+</html>

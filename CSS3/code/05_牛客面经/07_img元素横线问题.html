@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{
+      padding:0;
+      margin:0;
+    }
+    div{
+      width: 100px;
+      height: 100px;
+      border:1px solid #ccc;
+    }
+  </style>
+</head>
+<body>
+  <!-- 在img下面会有一个白线，这是因为img标签是inline-block，它的vertical-align的属性默认是baseline -->
+  <!-- vertical-align属性设置元素的垂直对其方式，就会有一条基线 -->
+  <img src="../../img/01/02.jpg" alt="">
+  <!-- 解决办法：将img元素变为block,vertical-align属性变为middle -->
+  <div>呵呵呵</div>
+</body>
+</html>

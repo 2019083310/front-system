@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div>
+    <button onclick="getData()">GET请求</button>
+    <button onclick="testPost()">POST请求</button>
+    <button onclick="testPut()">PUT请求</button>
+    <button onclick="testDelete()">DELETE请求</button>
+  </div>
+  <script src="https://cdn.bootcdn.net/ajax/libs/axios/0.21.1/axios.js"></script>
+  <script>
+    // get请求
+    function getData() {
+      axios.post('http://180.184.74.25:80/user/register', {
+        name:'coderliuy',
+        password:"123456"
+      }).then(res => {
+        console.log(res)
+      })
+    }
+    // post请求
+    // function testPost() {
+    //   axios.post('http://localhost:3000/posts', {
+    //     name: 'coder',
+    //     age: 18,
+    //     height: 1.88
+    //   }).then(res => {
+    //     console.log(res)
+    //   })
+    // }
+    // // 修改操作
+    // function testPut() {
+    //   axios.put('http://localhost:3000/posts', {
+    //     id:3
+    //   })
+    // }
+  </script>
+</body>
+
+</html>

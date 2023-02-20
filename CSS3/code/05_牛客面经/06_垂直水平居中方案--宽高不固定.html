@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .container {
+      width: 600px;
+      height: 6000px;
+      /* line-height: 600px; */
+      background-color: yellow;
+      /* text-align: center; */
+      position: relative;
+      overflow: hidden;
+      /* flex布局 */
+      /* display: flex; */
+      /* justify-content: center; */
+      /* align-items: center; */
+      /* grid布局 */
+      /* display: grid; */
+      /* justify-content: center; */
+      /* align-items: center; */
+    }
+
+    .content {
+      background-color: blueviolet;
+      width: 200px;
+      height: 200px;
+      /* 水平居中--宽高不固定 */
+      /* 1.margin:0 auto; */
+      /* margin: 0 auto; */
+      /* 2.flex布局 */
+      /* 3.grid布局 */
+      /* 4.绝对定位+margin */
+      /* position: absolute; */
+      /* 这里的Left的%是相对于父元素 */
+      /* left: 50%; */
+      /* margin: 0 auto; */
+      /* 5.绝对定位+transform */
+      /* 这里的平移的百分比是相对与自身 */
+      /* transform: translateX(-50%); */
+      /* 6.display:inline-block+父元素的text-align:center */
+      /* display: inline-block; */
+
+      /* 水质居中--宽高不固定 */
+      /* 1.flex */
+      /* 2.grid */
+      /* 3.position绝对定位+transform */
+      /* position: absolute;
+      top: 50%;
+      transform: translateY(-50%); */
+      /* 4.inline-height+ align*/
+      /* vertical-align: middle; */
+      /* display: inline-block; */
+
+      /* 水平垂直居中--宽高不固定 */
+      /* 1.flex */
+      /* 2.grid */
+      /* 3.绝对定位+transform */
+      /* 4.绝对定位+margin */
+      /* 5.转成行内元素+text-align  vertical-align */
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 水平垂直居中宽高不固定 -->
+  <div class="container">
+    <div class="content"></div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,23 @@
+/* //需要添加毛玻璃效果的div */
+.headSty {
+  height: 0.6rem;
+  width: 100%;
+  padding: 0 .1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  /* // 主要内容区也要进行定位,
+  并用z-index让它位于毛玻璃之上，如果不进行定位， 内容区也会模糊 position: relative; */
+}
+
+/* //实现毛玻璃的div        */
+.frosted {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 60px;
+  background: rgba(255, 255, 255, .1);
+  backdrop-filter: blur(4px);
+}

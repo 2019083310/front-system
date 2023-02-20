@@ -1,0 +1,10 @@
+#demo{
+  /* 1.百分比 */
+  /* border-radius: 50%; */
+
+  /* 2.像素 */
+  /* border-radius: 300px; */
+
+  /* 3.em  em通常用在字体当中 1em=16px */
+  /* border-radius:37.5em; */
+}

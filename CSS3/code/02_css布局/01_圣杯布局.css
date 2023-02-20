@@ -1,0 +1,105 @@
+/* 圣杯布局指的是：三栏布局 
+即header main  footer  其中main有三列 左侧边栏 主体  右侧边栏
+要求：左右两侧宽度固定，中间自适应，并且中间部分优先加载 */
+
+/* 方法：float或者flex */
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  text-align: center;
+}
+
+.header {
+  background-color: blueviolet;
+  line-height: 50px;
+}
+
+.footer {
+  background-color: brown;
+  line-height: 50px;
+}
+
+#container {
+  padding: 0 100px;
+  line-height: 200px;
+  width: 100%;
+  background-color: antiquewhite;
+}
+
+#container p {
+  float: left;
+  height: 100%;
+}
+
+.left {
+  width: 100px;
+  /* -100%是相对于父元素的content宽度 */
+  margin-left: -100%;
+  background-color: aqua;
+  position: relative;
+  left: -100px;
+}
+
+.center {
+  width: 100%;
+  background-color: #bfa;
+}
+
+.right {
+  width: 100px;
+  margin-left: -100px;
+  background-color: burlywood;
+  position: relative;
+  left: -100px;
+}
+
+.clearfix::after {
+  content: '';
+  clear: both;
+  display: table;
+}
+
+/* 方式二：flex布局 */
+/* body {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  height: 500px;
+}
+
+.header {
+  background-color: blueviolet;
+  line-height: 50px;
+}
+
+.footer {
+  background-color: brown;
+  line-height: 50px;
+}
+
+#container {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+}
+
+@media(min-width:768px) {
+  .center {
+    flex: 1;
+    background-color: aqua;
+  }
+
+  .left {
+    background-color: cadetblue;
+    order: -1;
+    flex: 0 0 50px;
+  }
+
+  .right {
+    background-color: yellow;
+    flex: 0 0 50px;
+  }
+} */

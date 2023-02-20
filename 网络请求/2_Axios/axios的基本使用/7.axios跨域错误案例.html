@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script src="https://cdn.bootcdn.net/ajax/libs/axios/0.21.1/axios.js"></script>
+  <script>
+    axios({
+      method:'get',
+      url:'https://wis.qq.com/weather/common',
+      params:{
+        source:'pc',
+        weather_type:'forecast_1h',
+        province:'辽宁省',
+        city:'大连市'
+      }
+    }).then(res=>{
+      console.log(res)
+    })
+  </script>
+</body>
+</html>

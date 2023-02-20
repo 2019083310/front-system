@@ -1,0 +1,40 @@
+/* 第一种opacity: 0*/
+/* 0-全透明  1-不透明  也可以是百分比 */
+/* opacity隐藏元素只是隐藏，依然会占据页面的位置，而且事件还会触发 */
+/* #demo{
+  opacity:0;
+} */
+
+/* 第二种通过设置字体颜色，边框颜色，背景颜色为透明  不适用有背景图片的元素 */
+/* #demo{
+  color:#fff;
+  background-color: #fff;
+} */
+
+/* 第三种通过设置visibility:hidden 隐藏元素   visible显示元素*/
+/* #demo{
+  visibility:hidden;
+} */
+
+/* 第四种通过clip-path:circle(0) */
+/* #demo{
+  clip-path: circle(0);
+} */
+
+
+/* 注意：以上四种隐藏了，也会在页面占据位置 */
+/* 第五种display:none   不会占据页面的位置*/
+/* #demo{
+  display: none;
+} */
+
+/* 第六种：position 移出页面，不会占据位置 脱离文档流 */
+/* #demo{
+  position: absolute;
+  left: -999px;
+} */
+
+/* 第七种：transform 这种会占据页面位置*/
+/* #demo{
+  transform: translateX(-999px);
+} */

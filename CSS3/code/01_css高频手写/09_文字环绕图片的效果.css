@@ -1,0 +1,15 @@
+.wrapper{
+  width:400px;
+  height:300px;
+  background-color: aqua;
+}
+
+.point{
+  float:left;
+  width:100px;
+  height:100%;
+  margin-right:5px;
+}
+.point img{
+  width:100%;
+}

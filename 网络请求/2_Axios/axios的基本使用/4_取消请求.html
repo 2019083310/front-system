@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <button onclick='request1()'>请求按钮1</button>
+  <button onclick='request2()'>请求按钮2</button>
+  <button onclick='cancelRequest()'>取消请求</button>
+  <script src="https://cdn.bootcdn.net/ajax/libs/axios/0.21.1/axios.js"></script>
+  <script>
+    // 注意：只有axios实例才有取消请求和发送多个请求的功能
+    // 而axios.create()创建出来的实例对象没有这些功能
+
+    // 案例
+    let cancel = null
+
+    function request1() {
+      // 在请求一个接口前, 取消前面一个未完成的请求
+      if (typeof cancel === 'function') {
+        cancel('取消请求')
+      }
+
+      setTimeout(() => {
+        axios.get('http://123.207.32.32:8000/home/multidata', {
+          cancelToken: new axios.CancelToken(c => {
+            cancel = c //c是一个用来取消请求的函数
+          })
+        }).then(res => {
+          console.log(res)
+        })
+      },1000)
+    }
+
+    function request2() {
+      if (typeof cancel === 'function') {
+        cancel('取消请求')
+      }
+
+      axios.get('http://localhost:3000/comments', {
+        cancelToken: new axios.CancelToken(c => {
+          cancel = c //c是一个用来取消请求的函数
+        })
+      }).then(res => {
+        console.log(res)
+      })
+    }
+  </script>
+</body>
+
+</html>

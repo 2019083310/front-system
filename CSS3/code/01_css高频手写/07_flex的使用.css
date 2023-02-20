@@ -1,0 +1,40 @@
+/* 
+  flex-box:弹性盒子，开启flex布局  display:flex
+  它有主轴和辅轴的概念，默认的情况下，主轴的水平方向向左，辅轴是垂直向下
+  通过flex-direction:raw|column|raw-reverse|column-reverse改变主轴和辅轴的方向
+
+  弹性元素上的属性：flex-grow  flex-shrink flex-basis
+  分别是弹性增长 弹性伸缩 弹性基础宽度   
+  */
+
+/* 两栏布局 */
+/* div.main{
+  display:flex;
+  flex-wrap: wrap;
+}
+.main nav{
+  flex:0 0 300px;
+}
+
+.main nav{
+  border:1px solid #333;
+}
+.main .content{
+  width:500px;
+  height:500px;
+  border:1px solid #333;
+}
+
+.main .content{
+  flex:1 0 0;
+} */
+
+
+/* form表单的弹性伸缩 */
+/* form{
+  display: flex;
+}
+
+input[type='text']:focus{
+  flex-grow:1;
+} */

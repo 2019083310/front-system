@@ -1,0 +1,12 @@
+html,body{
+  background-color: aqua;
+  font-size:16px;
+  /* background:url('../img/code-wallpaper-15.jpg'); */
+  background-repeat: no-repeat;
+  user-select: none;
+}
+
+.bg-image{
+  background: url('../img/nhlt.jpg');
+  background-size: contain;
+}

@@ -1,0 +1,19 @@
+/* css画等腰三角形 */
+
+#box1 {
+  width: 0;
+  height: 0;
+  margin: 100px auto;
+  border-left: 80px solid transparent;
+  border-right: 80px solid transparent;
+  border-bottom: 138.56px solid #bfc;
+}
+
+/* css实现等边三角形 */
+#box1 {
+  width: 0;
+  height: 0;
+  border-left: 100px solid transparent;
+  border-right: 100px solid transparent;
+  border-bottom: 173.2px solid #bfc;
+}

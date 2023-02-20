@@ -1,0 +1,29 @@
+/* 
+  css水平居中的方式:
+    1.margin:auto
+    2.绝对定位+偏移量+平移或者外边距
+    3.如果是行内元素在他的父元素上用text-align:center;
+    4.flex布局
+*/
+
+/* #demo2{
+  margin:0 auto;
+} */
+/* #demo2 {
+  position: absolute;
+  left: 50%;
+  right: 0;
+  transform:translateX(-50%);
+}
+
+#demo3 {
+  clear: both;
+} */
+/* #demo4{
+  text-align: center;
+} */
+#demo{
+  display: flex;
+  align-items:center;
+  justify-content: center;
+}

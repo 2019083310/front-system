@@ -1,0 +1,8 @@
+/* 等高布局的手段
+  1-display:flex
+  2-颜色上的欺骗
+  3-网格布局
+  4-padding-bottom:-99999px;
+  margin-bottom:99999px;
+  overflow:hidden;
+*/
