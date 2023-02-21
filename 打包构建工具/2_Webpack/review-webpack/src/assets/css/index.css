@@ -1,0 +1,18 @@
+#app{
+  color:blue;
+
+  background-image: url(../imgs//nhlt.jpg);
+}
+
+.box2{
+  background-image: url(../imgs//hai.jpg);
+}
+
+.omit{
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
