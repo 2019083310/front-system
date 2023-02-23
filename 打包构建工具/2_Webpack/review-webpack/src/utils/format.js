@@ -1,4 +1,3 @@
-export const formatDateTime=()=>{
-  return '1'
+export const formatDateTime=(a,b)=>{
+  return a+b
 }
-console.log('2222')

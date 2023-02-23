@@ -13,10 +13,11 @@ import {
 } from 'vue'
 import Hello from '@/vue/hello.vue'
 
+// ?把第三方包合并为一个chunk打包成单独chunk
 import dayjs from 'dayjs'
 console.log(dayjs(new Date()).format('YYYY-MM-DD HH:mm:ss'))
 
-const res = formatDateTime()
+const res = formatDateTime(undefined,null)
 
 console.log(res)
 console.log(1)
@@ -39,4 +40,11 @@ if(module.hot){
 const customVariable='coderyliu'
 console.log(customVariable)
 
+// ?处理ts文件
 import './ts/math.ts'
+
+// ?懒加载引入js文件
+import('./utils/01_mode.js').then(res=>{
+  console.log('mode.js引入成功')
+  console.log(res)
+})
