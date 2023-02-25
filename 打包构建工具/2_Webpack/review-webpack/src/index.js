@@ -1,6 +1,10 @@
-import {
-  formatDateTime
-} from '@/utils/format'
+// ?使用entry需要借助两个库来使用
+// import 'core-js/stable'
+// import 'regenerator-runtime/runtime'
+
+// import {
+//   formatDateTime
+// } from '@/utils/format'
 
 // 引入css文件
 import '@/assets/css/index.css'
@@ -8,24 +12,24 @@ import '@/assets/css/font.css'
 
 // 引入less文件
 import './assets/less/index.less'
-import {
-  createApp
-} from 'vue'
-import Hello from '@/vue/hello.vue'
+// import {
+//   createApp
+// } from 'vue'
+// import Hello from '@/vue/hello.vue'
+
+import ReactDom from 'react-dom/client'
 
 // ?把第三方包合并为一个chunk打包成单独chunk
 import dayjs from 'dayjs'
 console.log(dayjs(new Date()).format('YYYY-MM-DD HH:mm:ss'))
 
-const res = formatDateTime(undefined,null)
+// const res = formatDateTime(undefined,null)
 
-console.log(res)
-console.log(1)
 
 // ?引入vue组件
-const app=createApp(Hello)
+// const app=createApp(Hello)
 
-app.mount('#app')
+// app.mount('#app')
 
 // document.write('zbc')
 // console.log(1)
@@ -37,9 +41,6 @@ if(module.hot){
   })
 }
 
-const customVariable='coderyliu'
-console.log(customVariable)
-
 // ?处理ts文件
 import './ts/math.ts'
 
@@ -48,3 +49,8 @@ import('./utils/01_mode.js').then(res=>{
   console.log('mode.js引入成功')
   console.log(res)
 })
+
+// ?处理react
+import App from './react/App.jsx'
+const root=ReactDom.createRoot(document.querySelector('#app'))
+root.render(<App></App>)

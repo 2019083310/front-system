@@ -34,7 +34,9 @@ module.exports = {
     path: path.join(__dirname, 'dist'),
     filename: 'js/[name][contenthash:8].js',
     // ?通过node_modules或者import()语法引入的单独打包形成一个文件
-    chunkFilename: 'js/[name][contenthash:8].js'
+    chunkFilename: 'js/[name][contenthash:8].js',
+    // ?这个clean为true可以替换clean-webpack-plugin插件
+    // clean:true
   },
   module: {
     rules: [
@@ -119,9 +121,9 @@ module.exports = {
         test: /\.html$/,
         use: 'html-loader'
       },
-      // ?babel-loader的使用  js兼容处理
+      // ?babel-loader的使用  js兼容处理 jsx处理
       {
-        test: /\.(m?js|ts)$/,
+        test: /\.(m?jsx?|ts)$/,
         exclude: /node_modules/,
         //   // *loader的使用方式：三种
         //   // todo 1.use:['style-loader','css-loader','less-loader']
@@ -202,13 +204,16 @@ module.exports = {
   // ?开启dev-server  实时更新最新代码
   // *webpack-cli 升级到 4.x 的时候，就不能用 webpack-dev-server 跑脚本了，而是改为 webpack serve 去跑
   devServer: {
+    // ?这里的static可以是一个数组，['public','文件夹']
+    // ?表示的是index.html中请求不到的url,最后到static的文件夹中寻找文件
     static: {
       // webpack5不支持contentBase,支持static
       // contentBase:'./abc',
       directory: path.join(__dirname, './public')
     },
-    port: 8082,
+    port: 8088,
     open: true,
+    // host: '0.0.0.0',
     // ?HMR热模块替换 hotModuleReplacement 开启dev sever 更新文件页面会刷新，会全部进行打包，
     // ?开启热更新，只对内容改变的文件打包
     hot: true,
@@ -220,12 +225,19 @@ module.exports = {
         changeOrigin: true,
         pathWrite: ''
       }
-    }
+    },
+    // ?compress属性表示是否进行gzip压缩
+    compress: true,
+    historyApiFallback: true
   },
   // ?代码分割 第三方库单独打包形成一个chunk
   optimization: {
     splitChunks: {
       chunks: 'all'
     }
+  },
+  // todo 通过这个可以把webpack认为某个包打包文件太大的提示禁用掉
+  performance: {
+    hints: false
   }
 }
