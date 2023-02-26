@@ -12,10 +12,6 @@ import '@/assets/css/font.css'
 
 // 引入less文件
 import './assets/less/index.less'
-// import {
-//   createApp
-// } from 'vue'
-// import Hello from '@/vue/hello.vue'
 
 import ReactDom from 'react-dom/client'
 
@@ -24,16 +20,6 @@ import dayjs from 'dayjs'
 console.log(dayjs(new Date()).format('YYYY-MM-DD HH:mm:ss'))
 
 // const res = formatDateTime(undefined,null)
-
-
-// ?引入vue组件
-// const app=createApp(Hello)
-
-// app.mount('#app')
-
-// document.write('zbc')
-// console.log(1)
-
 // ?hot只能处理非入口文件的其它Js文件
 if(module.hot){
   module.hot.accept('./utils/format.js',()=>{
@@ -52,5 +38,5 @@ import('./utils/01_mode.js').then(res=>{
 
 // ?处理react
 import App from './react/App.jsx'
-const root=ReactDom.createRoot(document.querySelector('#app'))
+const root=ReactDom.createRoot(document.querySelector('#root'))
 root.render(<App></App>)

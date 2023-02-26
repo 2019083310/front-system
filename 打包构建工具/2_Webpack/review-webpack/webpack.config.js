@@ -29,12 +29,23 @@ module.exports = {
   // *js,HTML默认是不能使用HMR的，但是我们的html文件只有一个，这就导致了一个问题，html文件不能热更新了，
   // *即对html做出改变页面无变化，解决办法：只需要在entry中加入html的位置就可以了
   // *css文件的HMR是通过style-loader实现的
-  entry: ['./src/index.js', './public/index.html'],
+  // entry: ['./src/index.js', './public/index.html'],
+  // ?多入口文件打包
+  entry: {
+    index: {
+      import: './src/index.js',
+      // filename选项
+      // filename:'js/[name].[contenthash:8].js'
+    },
+    main: {
+      import: './src/main.js'
+    }
+  },
   output: {
     path: path.join(__dirname, 'dist'),
-    filename: 'js/[name][contenthash:8].js',
+    filename: 'js/[name].[contenthash:8].js',
     // ?通过node_modules或者import()语法引入的单独打包形成一个文件
-    chunkFilename: 'js/[name][contenthash:8].js',
+    chunkFilename: 'js/[name].[contenthash:8].js',
     // ?这个clean为true可以替换clean-webpack-plugin插件
     // clean:true
   },
